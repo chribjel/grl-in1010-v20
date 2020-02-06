@@ -20,9 +20,15 @@ public class Rektangel extends Form{
     }
 
 
-    public boolean equals(Rektangel rekt) {
-        boolean len = this.lengde == rekt.hentLengde();
-        boolean bred = this.bredde == rekt.hentBredde();
+    // For å kunne override denne metoden må man ta inn Object som paramenter
+    // og da må man først sjekke om objektet man tar inn er av samme type
+    // og deretter caste
+    @Override
+    public boolean equals(Object o) {
+        if (! (o instanceof Rektangel)) { return false; }
+        Rektangel r = (Rektangel) o;
+        boolean len = len == o.len;
+        boolean bred = bred == o.bred;
         return len && bred;
     }
 
