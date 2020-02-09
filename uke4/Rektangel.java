@@ -27,8 +27,8 @@ public class Rektangel extends Form{
     public boolean equals(Object o) {
         if (! (o instanceof Rektangel)) { return false; }
         Rektangel r = (Rektangel) o;
-        boolean len = len == o.len;
-        boolean bred = bred == o.bred;
+        boolean len = len == r.len;
+        boolean bred = bred == r.bred;
         return len && bred;
     }
 
