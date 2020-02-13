@@ -1,4 +1,4 @@
-class MiljovennligBil extends Personbil implements Skattbar, MiljoVennlig {
+class MiljovennligBil extends Personbil implements MiljoVennlig { // tregner ikke her implementere skattbar siden superklassen allerede gjør det
 
     private boolean svaneMerke;
     private final int UTSLIPP;
