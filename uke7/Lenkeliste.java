@@ -38,8 +38,10 @@ class Lenkeliste<T> implements Iterable<T>{
 
 	private class ListeIterator implements Iterator<T> {
 
+		//sier hvor vi skal starte iterasjonen
 		Node current = start;
 
+		// sjekker om vi har noe å hente
 		public boolean hasNext() {
 			if (current == null) {
 				return false;
@@ -47,6 +49,7 @@ class Lenkeliste<T> implements Iterable<T>{
 			return true;
 		}
 
+		// henter og går til neste
 		public T next() {
 			if (hasNext()) {
 				T data = current.data;
